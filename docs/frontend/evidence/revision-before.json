@@ -1,0 +1,605 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "title": "PULSE — Keep the Swarm Alive",
+      "ogImage": null,
+      "heroText": "HUMAN HEARTBEAT. ONCHAIN LIFE.\n\nThe swarm never sleeps.\nNeither does your Drone.\n\nOne small signal. A living connection.\nMint your soulbound Drone, keep its heartbeat going, and rise through the Hive.\n\nMint your Drone\n↗\nExplore the Hive\n↓\n\n4,096 Drones · Free mint · Fully onchain\n\nPULSE / SPECIMEN 001\nIllustration\nA LITTLE LIFE.\nA PERMANENT CONNECTION.\n20h / 48h\nBEAT / STAY ALIVE",
+      "eyebrows": [
+        {
+          "text": "HUMAN HEARTBEAT. ONCHAIN LIFE.",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "A LITTLE LIFE.\nA PERMANENT CONNECTION.",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "DRONES MINTED",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "DRONES ALIVE NOW",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "LONGEST ACTIVE STREAK",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "01 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "A SIGNAL WAITING TO BEGIN",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "BEGIN YOUR FIRST HEARTBEAT",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "02 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "BUILD YOUR STANDING",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "FUEL YOUR NEXT RANK",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "03 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "THE FIRST SIGNAL COULD BE YOURS",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "SIGNALS THAT STAND OUT",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "04 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "ONCHAIN, IN THE OPEN",
+          "size": "14px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.96px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        }
+      ],
+      "stats": {
+        "top": 866.25,
+        "bottom": 1001.015625,
+        "width": 1280,
+        "height": 134.765625
+      },
+      "visual": {
+        "top": 214.09375,
+        "bottom": 786.25,
+        "width": 576.734375,
+        "height": 572.15625
+      },
+      "counters": [
+        {
+          "label": {
+            "top": 900.4375,
+            "bottom": 915.4375,
+            "width": 115.453125,
+            "height": 15
+          },
+          "value": {
+            "top": 928.03125,
+            "bottom": 972.828125,
+            "width": 280.421875,
+            "height": 44.796875
+          }
+        },
+        {
+          "label": {
+            "top": 900.4375,
+            "bottom": 915.4375,
+            "width": 142.09375,
+            "height": 15
+          },
+          "value": {
+            "top": 928.03125,
+            "bottom": 972.828125,
+            "width": 251.4375,
+            "height": 44.796875
+          }
+        },
+        {
+          "label": {
+            "top": 900.4375,
+            "bottom": 915.4375,
+            "width": 186.484375,
+            "height": 15
+          },
+          "value": {
+            "top": 928.03125,
+            "bottom": 972.828125,
+            "width": 297.703125,
+            "height": 44.796875
+          }
+        }
+      ],
+      "sizes": [
+        "16px",
+        "27.2px",
+        "12px",
+        "13px",
+        "17.6px",
+        "66.4px",
+        "15px",
+        "14px",
+        "32px",
+        "38.4px",
+        "40px",
+        "24px",
+        "28.8px",
+        "20.8px"
+      ],
+      "weights": [
+        "400",
+        "700",
+        "500",
+        "550",
+        "650",
+        "600"
+      ],
+      "h1": {
+        "size": "66.4px",
+        "weight": "500",
+        "family": "\"Manrope Variable\", Manrope, sans-serif",
+        "transform": "none",
+        "tracking": "-4.316px",
+        "background": "rgba(0, 0, 0, 0)",
+        "padding": "0px",
+        "borderRadius": "0px"
+      },
+      "brand": {
+        "size": "27.2px",
+        "weight": "700",
+        "family": "\"Manrope Variable\", Manrope, sans-serif",
+        "transform": "none",
+        "tracking": "2.448px",
+        "background": "rgba(0, 0, 0, 0)",
+        "padding": "0px",
+        "borderRadius": "4px"
+      },
+      "rankSummary": {
+        "size": "16px",
+        "weight": "400",
+        "family": "\"Manrope Variable\", Manrope, sans-serif",
+        "transform": "none",
+        "tracking": "normal",
+        "background": "rgb(16, 17, 14)",
+        "padding": "19.2px",
+        "borderRadius": "6px"
+      },
+      "internalArrows": [
+        "Connect wallet\n↗",
+        "Mint your Drone\n↗",
+        "Connect wallet\n↗",
+        "Connect wallet\n↗",
+        "Connect wallet\n↗",
+        "Mint the first Drone ↗",
+        "Built with IdentityMD ↗"
+      ],
+      "stakeCopy": "BUILD YOUR STANDING\nStake. Rise through the Hive.\n\nStaking sets your rank. It pays no rewards, and you can unstake at any time—even while dormant."
+    },
+    {
+      "width": 390,
+      "title": "PULSE — Keep the Swarm Alive",
+      "ogImage": null,
+      "heroText": "HUMAN HEARTBEAT. ONCHAIN LIFE.\n\nThe swarm never sleeps.\nNeither does your Drone.\n\nOne small signal. A living connection.\nMint your soulbound Drone, keep its heartbeat going, and rise through the Hive.\n\nMint your Drone\n↗\nExplore the Hive\n↓\n\n4,096 Drones · Free mint · Fully onchain\n\nPULSE / SPECIMEN 001\nIllustration\nA LITTLE LIFE.\nA PERMANENT CONNECTION.\n20h / 48h\nBEAT / STAY ALIVE",
+      "eyebrows": [
+        {
+          "text": "HUMAN HEARTBEAT. ONCHAIN LIFE.",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "A LITTLE LIFE.\nA PERMANENT CONNECTION.",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "DRONES MINTED",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "0.96px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "DRONES ALIVE NOW",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "0.96px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "LONGEST ACTIVE STREAK",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "0.96px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "01 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "BEGIN YOUR FIRST HEARTBEAT",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "02 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "BUILD YOUR STANDING",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "FUEL YOUR NEXT RANK",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "03 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "THE FIRST SIGNAL COULD BE YOURS",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "SIGNALS THAT STAND OUT",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "04 / THE SWARM",
+          "size": "12px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.68px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "ONCHAIN, IN THE OPEN",
+          "size": "14px",
+          "weight": "400",
+          "family": "\"IBM Plex Mono\", monospace",
+          "transform": "uppercase",
+          "tracking": "1.96px",
+          "background": "rgba(0, 0, 0, 0)",
+          "padding": "0px",
+          "borderRadius": "0px"
+        }
+      ],
+      "stats": {
+        "top": 1212.578125,
+        "bottom": 1351.15625,
+        "width": 350,
+        "height": 138.578125
+      },
+      "visual": {
+        "top": 722.21875,
+        "bottom": 1148.578125,
+        "width": 350,
+        "height": 426.359375
+      },
+      "counters": [
+        {
+          "label": {
+            "top": 1231.171875,
+            "bottom": 1271.171875,
+            "width": 106.265625,
+            "height": 40
+          },
+          "value": {
+            "top": 1279.171875,
+            "bottom": 1315,
+            "width": 106.265625,
+            "height": 35.828125
+          }
+        },
+        {
+          "label": {
+            "top": 1231.171875,
+            "bottom": 1271.171875,
+            "width": 94.890625,
+            "height": 40
+          },
+          "value": {
+            "top": 1279.171875,
+            "bottom": 1315,
+            "width": 94.890625,
+            "height": 35.828125
+          }
+        },
+        {
+          "label": {
+            "top": 1231.171875,
+            "bottom": 1288.734375,
+            "width": 94.875,
+            "height": 57.5625
+          },
+          "value": {
+            "top": 1296.734375,
+            "bottom": 1332.5625,
+            "width": 94.875,
+            "height": 35.828125
+          }
+        }
+      ],
+      "sizes": [
+        "16px",
+        "22.4px",
+        "12px",
+        "17.6px",
+        "43.2px",
+        "14px",
+        "13px",
+        "25.6px",
+        "28px",
+        "38.4px",
+        "20.8px",
+        "24px"
+      ],
+      "weights": [
+        "400",
+        "700",
+        "550",
+        "650",
+        "500",
+        "600"
+      ],
+      "h1": {
+        "size": "43.2px",
+        "weight": "500",
+        "family": "\"Manrope Variable\", Manrope, sans-serif",
+        "transform": "none",
+        "tracking": "-2.808px",
+        "background": "rgba(0, 0, 0, 0)",
+        "padding": "0px",
+        "borderRadius": "0px"
+      },
+      "brand": {
+        "size": "22.4px",
+        "weight": "700",
+        "family": "\"Manrope Variable\", Manrope, sans-serif",
+        "transform": "none",
+        "tracking": "2.016px",
+        "background": "rgba(0, 0, 0, 0)",
+        "padding": "0px",
+        "borderRadius": "4px"
+      },
+      "rankSummary": {
+        "size": "16px",
+        "weight": "400",
+        "family": "\"Manrope Variable\", Manrope, sans-serif",
+        "transform": "none",
+        "tracking": "normal",
+        "background": "rgb(16, 17, 14)",
+        "padding": "19.2px",
+        "borderRadius": "6px"
+      },
+      "internalArrows": [
+        "Connect wallet\n↗",
+        "Mint your Drone\n↗",
+        "Connect wallet\n↗",
+        "Connect wallet\n↗",
+        "Connect wallet\n↗",
+        "Mint the first Drone ↗",
+        "Built with IdentityMD ↗"
+      ],
+      "stakeCopy": "BUILD YOUR STANDING\nStake. Rise through the Hive.\n\nStaking sets your rank. It pays no rewards, and you can unstake at any time—even while dormant."
+    }
+  ],
+  "polling": {
+    "supply": 4096,
+    "blockChanged": false,
+    "fullHiveCalls": 32,
+    "rpcCalls": 52
+  }
+}

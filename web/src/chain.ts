@@ -4,12 +4,14 @@ import {
   parseAbiParameters,
   zeroAddress,
   type Address,
+  type Hash,
   type PublicClient,
 } from "viem";
 import type { Runtime } from "./config";
 import type { Drone } from "./domain";
 import { erc20Abi, poolAbi, poolKeyType } from "./protocol";
 export type Snapshot = {
+  account?: Address;
   total: bigint;
   totalStaked: bigint;
   drones: Drone[];
@@ -20,6 +22,7 @@ export type Snapshot = {
   decimals: number;
   symbol: string;
   block: bigint;
+  blockHash: Hash;
   timestamp: number;
   verified: boolean;
   swapVerified: boolean;
@@ -110,8 +113,8 @@ export async function readSnapshot(
   account: Address | undefined,
   onProgress: (loaded: number, total: number) => void,
   client: PublicClient = runtime.client,
+  previous?: Snapshot,
 ): Promise<Snapshot> {
-  await verifyContracts(runtime, client);
   const block = await client.getBlock();
   const call = (functionName: string, args?: readonly unknown[]) =>
     client.readContract({
@@ -121,17 +124,56 @@ export async function readSnapshot(
       args,
       blockNumber: block.number,
     });
-  const [
-    total,
-    totalStaked,
-    decimals,
-    symbol,
-    balance,
-    allowance,
-    nativeBalance,
-    ownId,
-  ] = await Promise.all([
-    call("totalMinted") as Promise<bigint>,
+  const total = (await call("totalMinted")) as bigint;
+  const readPersonal = async () => {
+    const [balance, allowance, nativeBalance, ownId] = await Promise.all([
+      account
+        ? (client.readContract({
+            address: runtime.token.address,
+            abi: runtime.abis.LaunchToken,
+            functionName: "balanceOf",
+            args: [account],
+            blockNumber: block.number,
+          }) as Promise<bigint>)
+        : 0n,
+      account
+        ? (client.readContract({
+            address: runtime.token.address,
+            abi: runtime.abis.LaunchToken,
+            functionName: "allowance",
+            args: [account, runtime.drone.address],
+            blockNumber: block.number,
+          }) as Promise<bigint>)
+        : 0n,
+      account
+        ? client.getBalance({ address: account, blockNumber: block.number })
+        : 0n,
+      account ? (call("droneOf", [account]) as Promise<bigint>) : 0n,
+    ]);
+    const own =
+      ownId > 0n ? ((await call("stateOf", [ownId])) as Drone) : undefined;
+    return { balance, allowance, nativeBalance, own };
+  };
+  // Timer reads may reuse a complete, verified Hive at the exact same block.
+  // Compare the hash as well as the height so a same-height reorg forces a scan.
+  // Manual reads, account/RPC changes and confirmed writes never pass a cache.
+  if (
+    previous?.verified &&
+    previous.account === account &&
+    previous.block === block.number &&
+    previous.blockHash === block.hash &&
+    previous.total === total
+  ) {
+    if ((await client.getChainId()) !== runtime.manifest.chainId)
+      throw new Error(
+        "The RPC returned the wrong network. Transactions are disabled.",
+      );
+    const personal = await readPersonal();
+    onProgress(Number(total), Number(total));
+    return { ...previous, ...personal, loadedAt: Date.now() };
+  }
+  await verifyContracts(runtime, client);
+  const [totalStaked, decimals, symbol, personal] = await Promise.all([
     call("totalStaked") as Promise<bigint>,
     client.readContract({
       address: runtime.token.address,
@@ -145,28 +187,7 @@ export async function readSnapshot(
       functionName: "symbol",
       blockNumber: block.number,
     }) as Promise<string>,
-    account
-      ? (client.readContract({
-          address: runtime.token.address,
-          abi: runtime.abis.LaunchToken,
-          functionName: "balanceOf",
-          args: [account],
-          blockNumber: block.number,
-        }) as Promise<bigint>)
-      : 0n,
-    account
-      ? (client.readContract({
-          address: runtime.token.address,
-          abi: runtime.abis.LaunchToken,
-          functionName: "allowance",
-          args: [account, runtime.drone.address],
-          blockNumber: block.number,
-        }) as Promise<bigint>)
-      : 0n,
-    account
-      ? client.getBalance({ address: account, blockNumber: block.number })
-      : 0n,
-    account ? (call("droneOf", [account]) as Promise<bigint>) : 0n,
+    readPersonal(),
   ]);
   if (total > 4096n || decimals !== 18 || symbol !== "PULSE")
     throw new Error(
@@ -182,8 +203,6 @@ export async function readSnapshot(
   }
   if (drones.length !== Number(total))
     throw new Error("The Hive snapshot is incomplete. Refresh to retry.");
-  const own =
-    ownId > 0n ? ((await call("stateOf", [ownId])) as Drone) : undefined;
   let swapVerified = false;
   let swapIssue: string | undefined;
   try {
@@ -197,13 +216,12 @@ export async function readSnapshot(
     total,
     totalStaked,
     drones,
-    own,
-    balance,
-    allowance,
-    nativeBalance,
+    account,
+    ...personal,
     decimals,
     symbol,
     block: block.number,
+    blockHash: block.hash,
     timestamp: Number(block.timestamp),
     verified: true,
     swapVerified,

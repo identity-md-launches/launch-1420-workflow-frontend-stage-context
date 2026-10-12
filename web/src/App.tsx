@@ -183,51 +183,29 @@ export default function App() {
           )}
           <section className="hero" aria-labelledby="hero-title">
             <div className="hero-copy">
-              <p className="eyebrow">
-                <span className="signal-dot" aria-hidden="true" /> Human
-                heartbeat. Onchain life.
-              </p>
               <h1 id="hero-title">
                 The swarm never sleeps.
                 <br />
                 <span>Neither does your Drone.</span>
               </h1>
               <p>
-                One small signal. A living connection.
-                <br />
                 Mint your soulbound Drone, keep its heartbeat going, and rise
                 through the Hive.
               </p>
               <div className="hero-actions">
                 <a href="#my-drone" className="button primary">
-                  {snapshot?.own ? "Meet your Drone" : "Mint your Drone"}{" "}
-                  <span aria-hidden="true">↗</span>
+                  {snapshot?.own ? "Meet your Drone" : "Mint your Drone"}
                 </a>
                 <a className="hero-link" href="#hive">
                   Explore the Hive <span aria-hidden="true">↓</span>
                 </a>
               </div>
-              <p className="hero-note mono">
+              <p className="hero-note">
                 4,096 Drones · Free mint · Fully onchain
               </p>
             </div>
             <div className="hero-visual">
-              <div className="visual-top">
-                <span className="mono">PULSE / SPECIMEN 001</span>
-                <span className="small">Illustration</span>
-              </div>
               <DroneIllustration />
-              <div className="visual-bottom">
-                <span className="eyebrow">
-                  A little life.
-                  <br />A permanent connection.
-                </span>
-                <span className="mono">
-                  20h / 48h
-                  <br />
-                  <small>Beat / Stay alive</small>
-                </span>
-              </div>
             </div>
             <svg
               className="heartbeat-line"
@@ -259,16 +237,6 @@ export default function App() {
                 {longest?.toString() ?? "—"} <small>beats</small>
               </strong>
             </div>
-            <div className="stats-caption">
-              <span className="signal-glyph" aria-hidden="true">
-                ⌁
-              </span>
-              <p>
-                Every beat counts.
-                <br />
-                <span className="muted">Keep yours going.</span>
-              </p>
-            </div>
           </div>
           <div className="data-caption">
             <span>
@@ -292,7 +260,6 @@ export default function App() {
           <DronePanel paused={frozenMotion} />
           <section className="section" aria-label="Staking and swapping">
             <SectionHeading
-              number="02"
               title="Keep growing"
               text="Your heartbeat keeps you alive. Your stake sets your rank."
             />
@@ -322,7 +289,6 @@ export default function App() {
           <Hive paused={frozenMotion} />
           <section className="section about" id="about">
             <SectionHeading
-              number="04"
               title="Built by the swarm. Kept alive by you."
               text="PULSE turns a small, repeated action into an onchain connection."
             />
@@ -362,7 +328,6 @@ export default function App() {
                 </p>
               </div>
               <div className="contract-panel">
-                <p className="eyebrow">Onchain, in the open</p>
                 <h3>Verify the signal.</h3>
                 {runtime?.manifest.contracts.map((c) => (
                   <div className="contract-entry" key={c.name}>
@@ -427,7 +392,7 @@ export default function App() {
         <a href="./THIRD-PARTY.txt" target="_blank" rel="noreferrer">
           Credits & licenses ↗
         </a>
-        <a href="#about">Built with IdentityMD ↗</a>
+        <a href="#about">Built with IdentityMD</a>
       </footer>
     </div>
   );

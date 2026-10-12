@@ -50,6 +50,7 @@ function usePulseState() {
   const lock = useRef(false);
   const generation = useRef(0);
   const inflight = useRef(false);
+  const snapshotRef = useRef<Snapshot | undefined>(undefined);
   const accountRef = useRef(wallet.account);
   accountRef.current = wallet.account;
   useEffect(() => {
@@ -66,38 +67,47 @@ function usePulseState() {
       active = false;
     };
   }, []);
-  const refresh = useCallback(async () => {
-    if (!runtime || inflight.current) return;
-    inflight.current = true;
-    const ticket = generation.current;
-    setLoading(true);
-    try {
-      const data = await readSnapshot(
-        runtime,
-        wallet.account,
-        (loaded, total) =>
-          ticket === generation.current && setProgress({ loaded, total }),
-        client ?? runtime.client,
-      );
-      if (
-        ticket === generation.current &&
-        wallet.account === accountRef.current
-      ) {
-        setSnapshot(data);
-        setNow(data.timestamp);
-        setReadError("");
+  const refresh = useCallback(
+    async (mode: "full" | "poll" = "full") => {
+      if (!runtime || inflight.current) return;
+      inflight.current = true;
+      const ticket = generation.current;
+      setLoading(true);
+      try {
+        const data = await readSnapshot(
+          runtime,
+          wallet.account,
+          (loaded, total) =>
+            ticket === generation.current && setProgress({ loaded, total }),
+          client ?? runtime.client,
+          mode === "poll" ? snapshotRef.current : undefined,
+        );
+        if (
+          ticket === generation.current &&
+          wallet.account === accountRef.current
+        ) {
+          snapshotRef.current = data;
+          setSnapshot(data);
+          setNow(data.timestamp);
+          setReadError("");
+        }
+      } catch (error) {
+        if (ticket === generation.current) {
+          snapshotRef.current = undefined;
+          setReadError(errorMessage(error));
+        }
+      } finally {
+        inflight.current = false;
+        if (ticket === generation.current) setLoading(false);
       }
-    } catch (error) {
-      if (ticket === generation.current) setReadError(errorMessage(error));
-    } finally {
-      inflight.current = false;
-      if (ticket === generation.current) setLoading(false);
-    }
-  }, [runtime, wallet.account, client]);
+    },
+    [runtime, wallet.account, client],
+  );
   const refreshRef = useRef(refresh);
   refreshRef.current = refresh;
   useEffect(() => {
     generation.current++;
+    snapshotRef.current = undefined;
     setSnapshot(undefined);
     setReadError("");
     setLoading(false);
@@ -115,7 +125,7 @@ function usePulseState() {
   }, [refresh, wallet.chainId]);
   useEffect(() => {
     const timer = setInterval(() => {
-      if (!document.hidden && !lock.current) void refresh();
+      if (!document.hidden && !lock.current) void refresh("poll");
     }, 30000);
     return () => clearInterval(timer);
   }, [refresh]);

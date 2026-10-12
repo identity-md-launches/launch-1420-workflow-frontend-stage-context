@@ -27,8 +27,7 @@ const report = {
 };
 const { server, url } = await startPreview();
 const executablePath =
-  process.env.PULSE_CHROMIUM_PATH ||
-  "/opt/imd-worker/local/imd-browser-tool/ms-playwright/chromium-1246/chrome-linux64/chrome";
+  process.env.PULSE_CHROMIUM_PATH || chromium.executablePath();
 const browser = await chromium.launch({
   executablePath,
   headless: true,
@@ -717,7 +716,7 @@ try {
           };
         };
         return [
-          ".hero-copy > .eyebrow",
+          ".hero-copy > p:not(.hero-note)",
           ".hero-actions .primary",
           ".card-heading > p:last-child",
           '.segmented button[aria-pressed="true"]',

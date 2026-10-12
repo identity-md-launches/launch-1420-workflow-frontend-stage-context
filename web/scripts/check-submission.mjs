@@ -1,5 +1,5 @@
 // Measure a complete Git bundle using an isolated verification repository.
-// The assignment's original .git is read-only. Nothing is staged or committed there.
+// Nothing is staged or committed in the original checkout by this check.
 import { execFileSync } from "node:child_process";
 import {
   mkdir,
@@ -7,33 +7,51 @@ import {
   copyFile,
   stat,
   mkdtemp,
+  rm,
   readFile,
 } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import assert from "node:assert/strict";
 const root = fileURLToPath(new URL("../../", import.meta.url));
+const handoff = JSON.parse(
+  await readFile(
+    new URL("../deployment/handoff.json", import.meta.url),
+    "utf8",
+  ),
+);
 const scratch = path.join(root, "test/scratch");
 await mkdir(scratch, { recursive: true });
 const folder = await mkdtemp(path.join(scratch, "submission-"));
 const repo = path.join(folder, "repo");
-const handoff = JSON.parse(
-  await readFile(path.join(root, "web/deployment/handoff.json"), "utf8"),
-);
-// This worker's local history omits an older tree object. Obtain complete history
-// from the handoff's public source repository, and pin it to the deployed commit.
-execFileSync("git", ["clone", "--quiet", handoff.repoUrl, repo], {
-  env: { ...process.env, GIT_TERMINAL_PROMPT: "0" },
+// Clone the complete current history, including the previously accepted frontend.
+// A source-only checkout would undercount the bundle for a revision.
+execFileSync("git", ["clone", "--quiet", "--no-hardlinks", root, repo], {
   timeout: 120000,
 });
-execFileSync("git", [
-  "-C",
-  repo,
-  "checkout",
-  "--quiet",
-  "--detach",
-  handoff.sourceCommit,
-]);
+// The worker may provide a partial clone with promised historical tree objects.
+// Fill the deployed-source history in this disposable checkout, retaining the
+// accepted frontend commit from the local clone. Never alter root Git config.
+execFileSync(
+  "git",
+  [
+    "-C",
+    repo,
+    "fetch",
+    "--quiet",
+    "--refetch",
+    "--no-filter",
+    handoff.repoUrl,
+    handoff.sourceCommit,
+  ],
+  {
+    env: { ...process.env, GIT_TERMINAL_PROMPT: "0" },
+    timeout: 120000,
+  },
+);
+// Replace allowed trees so files deleted by Vite do not survive in the size check.
+for (const folder of ["web", "dist", "docs"])
+  await rm(path.join(repo, folder), { recursive: true, force: true });
 const omitted = new Set([
   "node_modules",
   ".npm",
@@ -65,7 +83,7 @@ async function copy(relative) {
 for (const folder of ["web", "dist", "docs"]) await copy(folder);
 const git = (args) =>
   execFileSync("git", ["-C", repo, ...args], { encoding: "utf8" }).trim();
-git(["add", "--", "web", "dist", "docs"]);
+git(["add", "--all", "--", "web", "dist", "docs"]);
 const changed = git(["diff", "--cached", "--name-only"])
   .split("\n")
   .filter(Boolean);
@@ -94,15 +112,16 @@ const reportIdentity = [
   "user.email=size-check@example.invalid",
 ];
 // This local verification commit is never delivered or pushed; only its bundle size is measured.
-execFileSync("git", [
-  "-C",
-  repo,
-  ...reportIdentity,
-  "commit",
-  "--quiet",
-  "-m",
-  "Measure permitted frontend delivery files",
-]);
+if (changed.length)
+  execFileSync("git", [
+    "-C",
+    repo,
+    ...reportIdentity,
+    "commit",
+    "--quiet",
+    "-m",
+    "Measure permitted frontend delivery files",
+  ]);
 const bundle = path.join(folder, "complete.bundle");
 git(["bundle", "create", bundle, "HEAD"]);
 git(["bundle", "verify", bundle]);
@@ -119,7 +138,11 @@ assert.equal(
     ],
     { encoding: "utf8" },
   ),
-  await readFile(path.join(root, "docs/abi/PulseDrone.json"), "utf8"),
+  execFileSync(
+    "git",
+    ["-C", root, "show", `${handoff.sourceCommit}:docs/abi/PulseDrone.json`],
+    { encoding: "utf8" },
+  ),
 );
 const bytes = (await stat(bundle)).size;
 assert.ok(bytes <= 8388608, `Bundle is ${bytes} bytes; budget is 8388608`);

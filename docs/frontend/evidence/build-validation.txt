@@ -1,3 +1,9 @@
+v22.23.2
+10.9.8
+
+> pulse-swarm-frontend@1.0.0 typecheck
+> tsc --noEmit
+
 
 > pulse-swarm-frontend@1.0.0 build
 > tsc --noEmit && vite build && node scripts/export.mjs
@@ -7,11 +13,132 @@ transforming...
 ✓ 435 modules transformed.
 rendering chunks...
 computing gzip size...
-../dist/index.html                                              1.01 kB │ gzip:   0.51 kB
+../dist/index.html                                              1.39 kB │ gzip:   0.59 kB
 ../dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2   14.71 kB
 ../dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2        24.84 kB
-../dist/assets/index-CG2vanT_.css                              24.29 kB │ gzip:   5.84 kB
-../dist/assets/ccip-DgYlq2x-.js                                 2.61 kB │ gzip:   1.23 kB
-../dist/assets/index-CK3olP71.js                              518.44 kB │ gzip: 160.66 kB
-✓ built in 2.59s
-Exported 2 pinned ABIs, 10 assets, 639,525 asset bytes; exact handoff/network/pool key and all hashes match.
+../dist/assets/index-D4wwLuic.css                              23.65 kB │ gzip:   5.59 kB
+../dist/assets/ccip-DvmsxUDW.js                                 2.61 kB │ gzip:   1.23 kB
+../dist/assets/index-uATX646p.js                              517.11 kB │ gzip: 160.49 kB
+✓ built in 3.06s
+Exported 2 pinned ABIs, 11 assets, 768,037 asset bytes; exact handoff/network/pool key and all hashes match.
+
+> pulse-swarm-frontend@1.0.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: exact 20-hour cooldown and inclusive 48-hour alive boundary
+ok 1 - exact 20-hour cooldown and inclusive 48-hour alive boundary
+  ---
+  duration_ms: 1.18073
+  type: 'test'
+  ...
+# Subtest: exact decimal amounts reject precision loss, notation, negative and zero values
+ok 2 - exact decimal amounts reject precision loss, notation, negative and zero values
+  ---
+  duration_ms: 16.948963
+  type: 'test'
+  ...
+# Subtest: rank boundaries and fractional progress preserve bigint precision
+ok 3 - rank boundaries and fractional progress preserve bigint precision
+  ---
+  duration_ms: 0.394902
+  type: 'test'
+  ...
+# Subtest: five- and six-field swap tuples encode the exact pool and both currency directions
+ok 4 - five- and six-field swap tuples encode the exact pool and both currency directions
+  ---
+  duration_ms: 9.525308
+  type: 'test'
+  ...
+# Subtest: native input sends value; token input sends none; invalid swap amounts fail
+ok 5 - native input sends value; token input sends none; invalid swap amounts fail
+  ---
+  duration_ms: 0.775762
+  type: 'test'
+  ...
+# Subtest: unknown chain offers exact add-chain parameters then switches again
+ok 6 - unknown chain offers exact add-chain parameters then switches again
+  ---
+  duration_ms: 0.4862
+  type: 'test'
+  ...
+# Subtest: wallet rejection does not trigger add-chain
+ok 7 - wallet rejection does not trigger add-chain
+  ---
+  duration_ms: 0.419789
+  type: 'test'
+  ...
+# Subtest: pinned ABI hashes match canonical export; paths reject traversal and URLs
+ok 8 - pinned ABI hashes match canonical export; paths reject traversal and URLs
+  ---
+  duration_ms: 52.954384
+  type: 'test'
+  ...
+# Subtest: unchanged 4,096-Drone poll uses three public RPC requests and no Hive batches
+ok 9 - unchanged 4,096-Drone poll uses three public RPC requests and no Hive batches
+  ---
+  duration_ms: 420.770999
+  type: 'test'
+  ...
+# Subtest: unchanged connected poll refreshes stateOf, balances and allowance without a Hive scan
+ok 10 - unchanged connected poll refreshes stateOf, balances and allowance without a Hive scan
+  ---
+  duration_ms: 244.969173
+  type: 'test'
+  ...
+# Subtest: manual refresh still performs all 32 batches at the same block
+ok 11 - manual refresh still performs all 32 batches at the same block
+  ---
+  duration_ms: 350.380279
+  type: 'test'
+  ...
+# Subtest: new block invalidates the Hive cache
+ok 12 - new block invalidates the Hive cache
+  ---
+  duration_ms: 17.550334
+  type: 'test'
+  ...
+# Subtest: supply invalidates the Hive cache
+ok 13 - supply invalidates the Hive cache
+  ---
+  duration_ms: 17.536453
+  type: 'test'
+  ...
+# Subtest: reorg invalidates the Hive cache
+ok 14 - reorg invalidates the Hive cache
+  ---
+  duration_ms: 17.734258
+  type: 'test'
+  ...
+# Subtest: account invalidates the Hive cache
+ok 15 - account invalidates the Hive cache
+  ---
+  duration_ms: 15.696444
+  type: 'test'
+  ...
+# Subtest: unverified invalidates the Hive cache
+ok 16 - unverified invalidates the Hive cache
+  ---
+  duration_ms: 18.438937
+  type: 'test'
+  ...
+# Subtest: cached polling checks the RPC chain ID and fails closed
+ok 17 - cached polling checks the RPC chain ID and fails closed
+  ---
+  duration_ms: 4.527821
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2376.054811
+
+> pulse-swarm-frontend@1.0.0 verify
+> node scripts/export.mjs --check
+
+Verified 2 pinned ABIs, 11 assets, 768,037 asset bytes; exact handoff/network/pool key and all hashes match.

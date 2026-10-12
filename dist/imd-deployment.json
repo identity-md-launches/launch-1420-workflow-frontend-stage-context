@@ -32,20 +32,20 @@
       "sha256": "18d4823170e8955fbdf9a39a2be87209532d98115bd7749551eb66063cd3b72c"
     },
     {
-      "path": "assets/ccip-DgYlq2x-.js",
-      "sha256": "28eb2b8653d447f87fbf52d1a2d4de283942ed98959edf77f8cedd03acb264ca"
+      "path": "assets/ccip-DvmsxUDW.js",
+      "sha256": "cb5591965ebdcfc053fc4bffddcd04e9d8bae10a149e74eebdeee7161191a830"
     },
     {
       "path": "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
       "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
     },
     {
-      "path": "assets/index-CG2vanT_.css",
-      "sha256": "0db75a4262477c33afbc35e4a19f89d46c1b04298bc815a604fcb7f22f652b4e"
+      "path": "assets/index-D4wwLuic.css",
+      "sha256": "60c90aa2b8012ee20ceda52c629af491bd9f7fc650a0c9fe03deb734194e0683"
     },
     {
-      "path": "assets/index-CK3olP71.js",
-      "sha256": "225e2a78d84ca8e4c1b2cc8958026004b1056c5623548262f47cf039a99ce5b3"
+      "path": "assets/index-uATX646p.js",
+      "sha256": "4e57ee48739d94ba15743acd4183d37534485e47cb890a1a2787682560fc1c04"
     },
     {
       "path": "assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
@@ -57,7 +57,11 @@
     },
     {
       "path": "index.html",
-      "sha256": "26b83f3b3ae67600526aa54a54cff8a8e6defe84d459be1e16b24e10b30cfb14"
+      "sha256": "d9f0ac82e7b215bbface6048a769b5be94bbaa39e1250fd13cc8b69e611afeb9"
+    },
+    {
+      "path": "og.png",
+      "sha256": "975c32746cde33637e32ee98a560a7c5fa2c897dd03e75f561ff203d3c4af7e2"
     }
   ],
   "poolKey": {

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-12T13:24:57.420Z",
+  "checkedAt": "2026-10-12T14:32:28.446Z",
   "mode": "read-only; no wallet or transactions",
   "expectedChainId": 1,
   "actualChainId": 1,
@@ -69,6 +69,6 @@
     "symbol": "IMD",
     "decimals": 18
   },
-  "blockNumber": "26176675",
-  "blockTimestamp": "1791811487"
+  "blockNumber": "26177010",
+  "blockTimestamp": "1791815543"
 }

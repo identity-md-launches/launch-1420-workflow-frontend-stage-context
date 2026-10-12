@@ -38,7 +38,6 @@ export function Hive({ paused }: { paused: boolean }) {
   return (
     <section id="hive" className="section">
       <SectionHeading
-        number="03"
         title="Meet the Hive"
         text="Thousands of individual signals. One living swarm."
       >
@@ -97,11 +96,10 @@ export function Hive({ paused }: { paused: boolean }) {
         </div>
       ) : !snapshot.total ? (
         <div className="empty-state">
-          <span className="eyebrow">The first signal could be yours</span>
           <h3>The Hive is waiting.</h3>
           <p>No Drones have been minted yet.</p>
           <a className="button" href="#my-drone">
-            Mint the first Drone ↗
+            Mint the first Drone
           </a>
         </div>
       ) : !filtered.length ? (
@@ -167,7 +165,6 @@ export function Hive({ paused }: { paused: boolean }) {
       <div className="leaderboard panel">
         <div className="leaderboard-heading">
           <div>
-            <p className="eyebrow">Signals that stand out</p>
             <h3>Hive leaderboard</h3>
           </div>
           <div className="segmented" aria-label="Leaderboard ranking">

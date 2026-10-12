@@ -20,12 +20,10 @@ export function PulseMark({ small = false }: { small?: boolean }) {
   );
 }
 export function SectionHeading({
-  number,
   title,
   text,
   children,
 }: {
-  number: string;
   title: string;
   text: string;
   children?: ReactNode;
@@ -33,9 +31,6 @@ export function SectionHeading({
   return (
     <div className="section-heading">
       <div>
-        <p className="eyebrow">
-          <span>{number}</span> / The swarm
-        </p>
         <h2>{title}</h2>
         <p className="muted">{text}</p>
       </div>
@@ -58,7 +53,6 @@ export function ConnectButton({
       onClick={() => void wallet.connect()}
     >
       {wallet.pending ? "Connecting…" : label}
-      <span aria-hidden="true">↗</span>
     </button>
   );
 }
@@ -109,7 +103,6 @@ export function ActionButton({
     >
       {pending && <span className="spinner" aria-hidden="true" />}
       {pending ? `${label}…` : label}
-      <span aria-hidden="true">↗</span>
     </button>
   );
 }

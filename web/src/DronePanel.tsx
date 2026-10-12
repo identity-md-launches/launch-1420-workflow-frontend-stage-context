@@ -28,7 +28,6 @@ export function DronePanel({ paused }: { paused: boolean }) {
   return (
     <section id="my-drone" className="section">
       <SectionHeading
-        number="01"
         title="Your place in the swarm"
         text="One wallet. One Drone. A connection that stays with you."
       />
@@ -41,7 +40,7 @@ export function DronePanel({ paused }: { paused: boolean }) {
               <div className="empty-hex">
                 <PulseMark />
               </div>
-              <p className="eyebrow">A signal waiting to begin</p>
+
               <h3>Your Drone awaits.</h3>
               <p>
                 Mint to reveal its Caste, color, and eyes.
@@ -127,7 +126,6 @@ export function DronePanel({ paused }: { paused: boolean }) {
             </>
           ) : (
             <>
-              <p className="eyebrow">Begin your first heartbeat</p>
               <h3>Meet your onchain companion.</h3>
               <p>
                 There are only 4,096 Drones. Mint yours for free and its first
@@ -225,11 +223,10 @@ export function StakePanel() {
   return (
     <div className="panel" id="stake">
       <div className="card-heading">
-        <span className="eyebrow">Build your standing</span>
         <h3>Stake. Rise through the Hive.</h3>
         <p>
-          Staking sets your rank. It pays no rewards, and you can unstake at any
-          time—even while dormant.
+          Staking sets your rank. It pays no rewards. You can unstake at any
+          time, even while dormant.
         </p>
       </div>
       <div className="rank-summary">
@@ -454,7 +451,7 @@ export function SendPulse() {
               }
             }}
           >
-            Review transfer <span aria-hidden="true">↗</span>
+            Review transfer
           </button>
         ) : (
           <div className="notice">

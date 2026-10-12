@@ -1,8 +1,12 @@
 # PULSE frontend validation
 
-## Scope and result
+## Revision results
 
-**Source, static export and worker validation are complete within the allowed write scope.** The in-place Git commit is blocked by the environment: `git add -- web/.gitignore` failed with `Unable to create .../.git/index.lock: Read-only file system`. The source, lockfile, export and evidence are left in the working tree for the submission service to collect. No attempt was made to change the protected Git mount or root configuration.
+The reopened review is completed in [REVISION.md](REVISION.md), with per-finding answers in `.imd-responses.json`. The current export, refreshed screenshots and automated reports reflect that revision. The original implementation record below is historical; its environment, file counts, bundle size and read-only Git limitation describe the previous worker. For current sizes and results, use the revision evidence.
+
+## Original implementation scope and result
+
+**At the original implementation handoff, source, static export and worker validation were complete within the allowed write scope.** On that previous worker, the in-place Git commit was blocked by the environment: `git add -- web/.gitignore` failed with `Unable to create .../.git/index.lock: Read-only file system`. The source, lockfile, export and evidence are left in the working tree for the submission service to collect. No attempt was made to change the protected Git mount or root configuration.
 
 The approved PULSE workflow and both pinned handoffs were read before implementation. The deployed implementation binds PULSE in its constructor and has no owner or setter, so the conditional admin panel is inapplicable. A token and pool are supplied, so buy/sell controls are included. No owner, deployment address, pool hook, router, RPC credential or WalletConnect ID was invented.
 

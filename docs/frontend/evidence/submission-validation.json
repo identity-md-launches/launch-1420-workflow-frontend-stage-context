@@ -1,0 +1,10 @@
+{
+  "result": "pass",
+  "changedFiles": 50,
+  "copiedSourceExportDocsBytes": 4606575,
+  "completeGitBundleBytes": 6516559,
+  "limitBytes": 8388608,
+  "checkedScope": "web/**, dist/**, docs/**, explicit web/.gitignore",
+  "originalGitModified": false,
+  "scratchBundle": "test/scratch/submission-URWi6j/complete.bundle"
+}

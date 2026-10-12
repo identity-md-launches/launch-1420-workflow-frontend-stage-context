@@ -1,116 +1,116 @@
 {
   "mode": "Production export at /preview/; deterministic mocked RPC and injected wallet; no transactions broadcast",
-  "startedAt": "2026-10-12T13:52:29.783Z",
+  "startedAt": "2026-10-12T14:38:21.990Z",
   "cases": [
     {
       "name": "relative static export, configuration, ABIs, fonts and complete public Hive reads",
       "result": "pass",
-      "durationMs": 1117
+      "durationMs": 3093
     },
     {
       "name": "missing browser wallet gives a recoverable error",
       "result": "pass",
-      "durationMs": 357
+      "durationMs": 2102
     },
     {
       "name": "EIP-6963 discovery retains both announced wallets and connects the selected provider",
       "result": "pass",
-      "durationMs": 386
+      "durationMs": 1778
     },
     {
       "name": "connection rejection, wrong chain and exact add-chain fallback",
       "result": "pass",
-      "durationMs": 530
+      "durationMs": 1601
     },
     {
       "name": "mint simulates, locks through receipt, prevents duplicate clicks and reveals onchain artwork",
       "result": "pass",
-      "durationMs": 5031
+      "durationMs": 5222
     },
     {
       "name": "heartbeat cooldown, decoded simulation revert and confirmed beat",
       "result": "pass",
-      "durationMs": 693
+      "durationMs": 1167
     },
     {
       "name": "exact staking approval, rejection recovery, stake and instant unstake",
       "result": "pass",
-      "durationMs": 1208
+      "durationMs": 2428
     },
     {
       "name": "six-hour warning, dormancy, revival and streak reset",
       "result": "pass",
-      "durationMs": 441
+      "durationMs": 1173
     },
     {
       "name": "buy PULSE: simulated quote, explicit Permit2/router approvals, minimum output and zero ETH",
       "result": "pass",
-      "durationMs": 1244
+      "durationMs": 1615
     },
     {
       "name": "sell PULSE: direction inversion, quote invalidation, validation and both spending approvals",
       "result": "pass",
-      "durationMs": 1286
+      "durationMs": 1551
     },
     {
       "name": "existing sufficient allowances skip approvals and quotes expire after 60 seconds",
       "result": "pass",
-      "durationMs": 1061
+      "durationMs": 1158
     },
     {
       "name": "PULSE transfer validates recipient and requires an explicit review",
       "result": "pass",
-      "durationMs": 281
+      "durationMs": 801
     },
     {
       "name": "Hive status/Caste filters, empty-state recovery and active-streak leaderboard",
       "result": "pass",
-      "durationMs": 194
+      "durationMs": 241
     },
     {
       "name": "responsive rendered export at desktop, tablet, phone and 320px with reduced motion and keyboard focus",
       "result": "pass",
-      "durationMs": 2373
+      "durationMs": 2540
     },
     {
       "name": "automated accessibility scan of connected production page",
       "result": "pass",
-      "durationMs": 1129
+      "durationMs": 1318
     },
     {
       "name": "account and chain changes clear personal state and disable writes",
       "result": "pass",
-      "durationMs": 789
+      "durationMs": 818
     },
     {
       "name": "RPC failure, explicit wallet read fallback, and failed deployment checks fail closed",
       "result": "pass",
-      "durationMs": 999
+      "durationMs": 1337
     },
     {
       "name": "batched global counts, lazy gallery expansion and top 50 leaderboard",
       "result": "pass",
-      "durationMs": 280
+      "durationMs": 507
     },
     {
       "name": "changing accounts while a transaction is pending never restores the previous account’s Drone",
       "result": "pass",
-      "durationMs": 5906
+      "durationMs": 6113
     },
     {
       "name": "keyboard activation completes connect, mint, approve and stake",
       "result": "pass",
-      "durationMs": 1823
+      "durationMs": 2382
     },
     {
       "name": "tampered ABI is rejected before contract reads or signing",
       "result": "pass",
-      "durationMs": 355
+      "durationMs": 584
     },
     {
       "name": "no uncaught application exceptions or failed static resources",
       "result": "pass",
-      "durationMs": 0
+      "durationMs": 1
     }
   ],
   "viewports": [
@@ -164,7 +164,7 @@
   },
   "contrast": [
     {
-      "selector": ".hero-copy > .eyebrow",
+      "selector": ".hero-copy > p:not(.hero-note)",
       "foreground": "rgb(166, 173, 155)",
       "background": "rgb(16, 17, 14)",
       "ratio": 8.18,
@@ -214,7 +214,7 @@
     }
   ],
   "result": "pass",
-  "finishedAt": "2026-10-12T13:52:57.769Z",
+  "finishedAt": "2026-10-12T14:39:02.353Z",
   "mockTransactions": [
     {
       "address": "0x7a3bc2d6578f1528ca963a78824e5ba19257d2fe",

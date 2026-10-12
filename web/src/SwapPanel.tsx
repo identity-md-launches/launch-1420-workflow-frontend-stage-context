@@ -341,7 +341,6 @@ export function SwapPanel() {
   return (
     <div className="panel" id="swap">
       <div className="card-heading">
-        <span className="eyebrow">Fuel your next rank</span>
         <h3>Get PULSE.</h3>
         <p>
           Trade {pairSymbol} and PULSE in the launch’s Uniswap v4 pool. You’ll
@@ -464,8 +463,11 @@ export function SwapPanel() {
             disabled={quoting || locked || !snapshot?.swapVerified || !pair}
             onClick={() => void getQuote()}
           >
-            {quoting ? "Getting quote…" : quote ? "Refresh quote" : "Get quote"}{" "}
-            <span aria-hidden="true">↗</span>
+            {quoting
+              ? "Getting quote…"
+              : quote
+                ? "Refresh quote"
+                : "Get quote"}{" "}
           </button>
         ) : (
           <>

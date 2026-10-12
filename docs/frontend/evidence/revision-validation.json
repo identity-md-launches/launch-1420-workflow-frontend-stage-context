@@ -1,0 +1,615 @@
+{
+  "mode": "Production export, mocked wallet/RPC, accelerated browser clock; no broadcasts",
+  "startedAt": "2026-10-12T14:38:24.579Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "sizes": [
+        "16px",
+        "24px",
+        "12px",
+        "13px",
+        "66.4px",
+        "32px"
+      ],
+      "weights": [
+        "400",
+        "600"
+      ],
+      "h1Weight": "600",
+      "stats": {
+        "top": 793.625,
+        "bottom": 923.59375,
+        "width": 1280,
+        "height": 129.96875
+      },
+      "counters": [
+        {
+          "label": "Drones minted",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 850.609375,
+            "bottom": 895.40625,
+            "width": 398.65625,
+            "height": 44.796875
+          }
+        },
+        {
+          "label": "Drones alive now",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 850.609375,
+            "bottom": 895.40625,
+            "width": 369.671875,
+            "height": 44.796875
+          }
+        },
+        {
+          "label": "Longest active streak",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 850.609375,
+            "bottom": 895.40625,
+            "width": 369.65625,
+            "height": 44.796875
+          }
+        }
+      ],
+      "heroVisualVisible": true,
+      "headingKickers": 0,
+      "internalArrows": 0,
+      "externalArrows": 3,
+      "heroCopy": "The swarm never sleeps.\nNeither does your Drone.\n\nMint your soulbound Drone, keep its heartbeat going, and rise through the Hive.\n\nMint your Drone\nExplore the Hive\n↓\n\n4,096 Drones · Free mint · Fully onchain",
+      "nestedRankSurface": {
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px"
+      },
+      "title": "PULSE: Keep the Swarm Alive",
+      "ogImage": "./og.png",
+      "twitterCard": "summary_large_image"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "sizes": [
+        "16px",
+        "24px",
+        "13px",
+        "40.704px",
+        "12px",
+        "32px"
+      ],
+      "weights": [
+        "400",
+        "600"
+      ],
+      "h1Weight": "600",
+      "stats": {
+        "top": 704.0625,
+        "bottom": 834.03125,
+        "width": 704,
+        "height": 129.96875
+      },
+      "counters": [
+        {
+          "label": "Drones minted",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 761.046875,
+            "bottom": 805.84375,
+            "width": 215.46875,
+            "height": 44.796875
+          }
+        },
+        {
+          "label": "Drones alive now",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 761.046875,
+            "bottom": 805.84375,
+            "width": 195.296875,
+            "height": 44.796875
+          }
+        },
+        {
+          "label": "Longest active streak",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 761.046875,
+            "bottom": 805.84375,
+            "width": 195.296875,
+            "height": 44.796875
+          }
+        }
+      ],
+      "heroVisualVisible": true,
+      "headingKickers": 0,
+      "internalArrows": 0,
+      "externalArrows": 3,
+      "heroCopy": "The swarm never sleeps.\nNeither does your Drone.\n\nMint your soulbound Drone, keep its heartbeat going, and rise through the Hive.\n\nMint your Drone\nExplore the Hive\n↓\n\n4,096 Drones · Free mint · Fully onchain",
+      "nestedRankSurface": {
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px"
+      },
+      "title": "PULSE: Keep the Swarm Alive",
+      "ogImage": "./og.png",
+      "twitterCard": "summary_large_image"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "sizes": [
+        "16px",
+        "24px",
+        "12px",
+        "43.2px",
+        "13px",
+        "32px"
+      ],
+      "weights": [
+        "400",
+        "600"
+      ],
+      "h1Weight": "600",
+      "stats": {
+        "top": 684.046875,
+        "bottom": 804.421875,
+        "width": 350,
+        "height": 120.375
+      },
+      "counters": [
+        {
+          "label": "Drones minted",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 752.234375,
+            "bottom": 785.828125,
+            "width": 106.265625,
+            "height": 33.59375
+          }
+        },
+        {
+          "label": "Drones alive now",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 752.234375,
+            "bottom": 785.828125,
+            "width": 94.890625,
+            "height": 33.59375
+          }
+        },
+        {
+          "label": "Longest active streak",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 752.234375,
+            "bottom": 785.828125,
+            "width": 94.875,
+            "height": 33.59375
+          }
+        }
+      ],
+      "heroVisualVisible": false,
+      "headingKickers": 0,
+      "internalArrows": 0,
+      "externalArrows": 3,
+      "heroCopy": "The swarm never sleeps.\nNeither does your Drone.\n\nMint your soulbound Drone, keep its heartbeat going, and rise through the Hive.\n\nMint your Drone\nExplore the Hive\n↓\n\n4,096 Drones · Free mint · Fully onchain",
+      "nestedRankSurface": {
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px"
+      },
+      "title": "PULSE: Keep the Swarm Alive",
+      "ogImage": "./og.png",
+      "twitterCard": "summary_large_image"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "sizes": [
+        "16px",
+        "24px",
+        "12px",
+        "43.2px",
+        "13px",
+        "32px"
+      ],
+      "weights": [
+        "400",
+        "600"
+      ],
+      "h1Weight": "600",
+      "stats": {
+        "top": 714.4375,
+        "bottom": 855.609375,
+        "width": 288,
+        "height": 141.171875
+      },
+      "counters": [
+        {
+          "label": "Drones minted",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 803.421875,
+            "bottom": 837.015625,
+            "width": 85.609375,
+            "height": 33.59375
+          }
+        },
+        {
+          "label": "Drones alive now",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 803.421875,
+            "bottom": 837.015625,
+            "width": 74.21875,
+            "height": 33.59375
+          }
+        },
+        {
+          "label": "Longest active streak",
+          "labelStyle": {
+            "transform": "none",
+            "tracking": "normal"
+          },
+          "value": {
+            "top": 803.421875,
+            "bottom": 837.015625,
+            "width": 74.21875,
+            "height": 33.59375
+          }
+        }
+      ],
+      "heroVisualVisible": false,
+      "headingKickers": 0,
+      "internalArrows": 0,
+      "externalArrows": 3,
+      "heroCopy": "The swarm never sleeps.\nNeither does your Drone.\n\nMint your soulbound Drone, keep its heartbeat going, and rise through the Hive.\n\nMint your Drone\nExplore the Hive\n↓\n\n4,096 Drones · Free mint · Fully onchain",
+      "nestedRankSurface": {
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px"
+      },
+      "title": "PULSE: Keep the Swarm Alive",
+      "ogImage": "./og.png",
+      "twitterCard": "summary_large_image"
+    }
+  ],
+  "polling": [
+    {
+      "name": "unchanged full-supply public poll",
+      "batches": 0,
+      "rpcRequests": 5,
+      "functions": [
+        "totalMinted",
+        "decimals",
+        "symbol"
+      ]
+    },
+    {
+      "name": "manual full-supply refresh",
+      "batches": 32,
+      "rpcRequests": 52,
+      "functions": [
+        "totalMinted",
+        "pulseToken",
+        "totalStaked",
+        "decimals",
+        "symbol",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getSlot0",
+        "decimals",
+        "symbol"
+      ]
+    },
+    {
+      "name": "unchanged connected full-supply poll",
+      "batches": 0,
+      "rpcRequests": 11,
+      "functions": [
+        "totalMinted",
+        "balanceOf",
+        "allowance",
+        "droneOf",
+        "stateOf",
+        "decimals",
+        "symbol",
+        "balanceOf"
+      ]
+    },
+    {
+      "name": "new block requires a full scan",
+      "batches": 32,
+      "rpcRequests": 60,
+      "functions": [
+        "totalMinted",
+        "pulseToken",
+        "totalStaked",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "droneOf",
+        "stateOf",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getSlot0",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "allowance"
+      ]
+    },
+    {
+      "name": "same-height reorg requires a full scan",
+      "batches": 32,
+      "rpcRequests": 58,
+      "functions": [
+        "totalMinted",
+        "pulseToken",
+        "totalStaked",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "droneOf",
+        "stateOf",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getSlot0",
+        "decimals",
+        "symbol",
+        "balanceOf"
+      ]
+    },
+    {
+      "name": "failed verification invalidates the cache; timer recovery scans again",
+      "batches": 32,
+      "rpcRequests": 60,
+      "functions": [
+        "totalMinted",
+        "pulseToken",
+        "totalStaked",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "droneOf",
+        "stateOf",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getSlot0",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "allowance"
+      ]
+    },
+    {
+      "name": "confirmed heartbeat refresh",
+      "batches": 32,
+      "rpcRequests": 64,
+      "functions": [
+        "tokenURI",
+        "beat",
+        "beat",
+        "totalMinted",
+        "pulseToken",
+        "totalStaked",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "droneOf",
+        "stateOf",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getDrones",
+        "getSlot0",
+        "tokenURI",
+        "decimals",
+        "symbol",
+        "balanceOf",
+        "allowance",
+        "allowance"
+      ]
+    }
+  ],
+  "errors": [],
+  "shareImage": {
+    "width": 1200,
+    "height": 630,
+    "bytes": 130109,
+    "status": 200
+  },
+  "result": "pass",
+  "completedAt": "2026-10-12T14:38:40.999Z"
+}

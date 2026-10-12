@@ -4,7 +4,7 @@ A static React + TypeScript interface for the deployed PULSE token, soulbound Pu
 
 ## Run and rebuild
 
-Use Node.js 24 (the worker used 24.21.0) and npm. Run from the repository root:
+Use Node.js 22.23 or newer and npm (this revision used Node 22.23.2 and npm 10.9.8). Run from the repository root:
 
 ```sh
 npm ci --prefix web
@@ -54,28 +54,29 @@ The browser fetches `dist/imd-deployment.json`, then the ABI files named by that
 - Hive reads use block-pinned `getDrones` batches of 128. Global counts and top-50 leaderboards appear only after a complete snapshot. Gallery rendering is paginated by 12, and actual artwork reads are lazy. Filters cover Alive/Dormant and all four Castes. Active-streak ranking excludes Dormant Drones; staking ranking includes them.
 - Persistent feedback per action covers simulation, signing, pending receipt, confirmation and error. A global lock prevents overlapping wallet actions without relabeling unrelated buttons as pending. Confirmed actions refresh allowances/state before unlocking. Receipt uncertainty retains the lock and offers a manual confirmation check after the automatic wait ends. Transaction replacements are followed; cancellations are not called successful actions. Activity retains the signing account and explorer link across account changes.
 
-Reads refresh every 30 seconds while the page is visible. UI countdowns interpolate from the latest block timestamp every second. Snapshot time, block number, connection state and read source remain visible. All-state reads are bounded by the contract's 4,096-Drone limit; a slow RPC may take longer to complete the full Hive scan. A snapshot older than 90 seconds disables writes until refreshed. Simulation remains authoritative for cooldown and eligibility.
+Reads refresh every 30 seconds while the page is visible. Timer reads first compare the latest block height/hash and total minted with the complete verified snapshot. An unchanged block reuses the Hive array while refreshing the connected wallet's `stateOf`, balances and staking allowance, and checking the RPC chain ID. New blocks (including same-height reorgs), changed supply, wallet/RPC changes, verification failures, manual refreshes and confirmed transactions force a full scan. UI countdowns interpolate from the latest block timestamp every second. Snapshot time, block number, connection state and read source remain visible. Full reads are bounded by the contract's 4,096-Drone limit; a slow RPC may take longer to complete the full Hive scan. A snapshot older than 90 seconds disables writes until refreshed. Simulation remains authoritative for cooldown and eligibility.
 
 ## Validation
 
 ```sh
 npm --prefix web test
 npm --prefix web run test:browser
+npm --prefix web run test:revision
 npm --prefix web run check:rpc
 npm --prefix web run verify
 ```
 
-`node web/scripts/check-dev.mjs` checks the development server. `node web/scripts/check-submission.mjs` creates and verifies a complete size-check Git bundle in the disposable scratch area using the pinned public source repository, then checks the allowed path set and 8 MiB budget. The original `.git` mount is read-only on this worker; it is not modified.
+`node web/scripts/check-dev.mjs` checks the development server. `node web/scripts/check-submission.mjs` creates and verifies a complete size-check Git bundle in the disposable scratch area using the checkout's accepted frontend history and fetching the pinned deployed-source history into that disposable clone to fill promised objects, then checks the allowed path set and 8 MiB budget. This check does not modify the original Git metadata.
 
-`test` checks timing boundaries, amount precision, rank thresholds, the five/six-field router wire formats, currency directions, native transaction value, wallet switching, and pinned ABI integrity. `test:browser` serves the actual production export at `/preview/` and exercises it in Chromium with deterministic mocked RPC/wallet responses. **It never broadcasts transactions.** It writes its report and screenshots to `docs/frontend/evidence/`.
+`test` checks timing boundaries, amount precision, rank thresholds, the five/six-field router wire formats, currency directions, native transaction value, wallet switching, pinned ABI integrity, and snapshot-cache invalidation. `test:browser` serves the actual production export at `/preview/` and exercises it in Chromium with deterministic mocked RPC/wallet responses. **It never broadcasts transactions.** It writes its report and screenshots to `docs/frontend/evidence/`.
 
-The browser script defaults to the worker's installed Chromium binary. On another machine set `PULSE_CHROMIUM_PATH` to a Chromium executable, or install Playwright Chromium and supply its executable path. `check:rpc` makes read-only requests to the handoff's public RPCs and writes `docs/frontend/rpc-validation.json`.
+The browser scripts use Playwright's Chromium by default. Install it with `cd web && npx playwright install chromium`, or set `PULSE_CHROMIUM_PATH` to an installed Chromium executable. This worker uses `/opt/ms-playwright/chromium-1247/chrome-linux64/chrome`. `test:revision` checks the reported visual regressions and uses an accelerated browser clock to exercise full-supply timer, manual, reorg, error-recovery and transaction refreshes without a real-time wait. `check:rpc` makes read-only requests to the handoff's public RPCs and writes `docs/frontend/rpc-validation.json`.
 
 See [validation and limitations](../docs/frontend/VALIDATION.md) and the [implemented design](../docs/DESIGN.md). Screenshots use mock fixtures except files explicitly labeled as live public reads. They are worker evidence, not independent certification.
 
 ## Scope and limitations
 
-The contract binds PULSE immutably and has no `owner()` or `setPulseToken()`, so no admin panel or guessed owner is present. ENS resolution is not configured because the network handoff supplies no ENS resolver; the app uses checksummed addresses, full-address links, and copy controls. WalletConnect is not configured without a supplied public project ID. Open Graph title/description and favicon are included; absolute deployment URL/social-image metadata await the publisher's final domain.
+The contract binds PULSE immutably and has no `owner()` or `setPulseToken()`, so no admin panel or guessed owner is present. ENS resolution is not configured because the network handoff supplies no ENS resolver; the app uses checksummed addresses, full-address links, and copy controls. WalletConnect is not configured without a supplied public project ID. Open Graph title/description, favicon, and a 1200×630 `public/og.png` are included. The image renders the existing `DroneIllustration` and local Manrope font; regenerate it from `web/` with `npm run social-card` (and `PULSE_CHROMIUM_PATH` if needed), then rebuild. Image metadata uses relative `./og.png` until the publisher assigns a domain; absolute social-image URLs and real-platform unfurl testing remain publication steps. No domain was invented.
 
 No live mint, heartbeat, approval, stake, unstake, transfer or swap was authorized or broadcast during validation. Real wallet extension/mobile-wallet behavior and real liquidity execution require later authorized testing. USD context is explicitly unavailable without a configured price source. The UI deliberately uses the requested dark theme; there is no theme switch or localization system.
 

@@ -9,9 +9,11 @@
     "build": "tsc --noEmit && vite build && node scripts/export.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "verify": "node scripts/export.mjs --check",
-    "test": "tsx --test tests/core.test.ts",
+    "test": "tsx --test tests/*.test.ts",
     "test:browser": "node tests/browser.mjs",
-    "check:rpc": "node scripts/check-rpc.mjs"
+    "check:rpc": "node scripts/check-rpc.mjs",
+    "social-card": "node --import tsx scripts/social-card.mjs",
+    "test:revision": "node tests/revision.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "5.2.8",

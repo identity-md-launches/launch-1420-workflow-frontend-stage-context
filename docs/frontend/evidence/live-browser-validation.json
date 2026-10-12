@@ -1,0 +1,22 @@
+{
+  "mode": "Read-only configured public RPC; no injected wallet, signer, or transactions",
+  "checkedAt": "2026-10-12T14:38:28.699Z",
+  "errors": [],
+  "views": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "statistics": "Drones minted\n0 / 4,096\nDrones alive now\n0 \nLongest active streak\n0 beats",
+      "source": "Public RPC · Block 26,177,039 · Snapshot 2:38:23 PM · Refreshes every 30s\nReduced motion on"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "statistics": "Drones minted\n0 / 4,096\nDrones alive now\n0 \nLongest active streak\n0 beats",
+      "source": "Public RPC · Block 26,177,039 · Snapshot 2:38:23 PM · Refreshes every 30s\nReduced motion on"
+    }
+  ],
+  "result": "pass"
+}
