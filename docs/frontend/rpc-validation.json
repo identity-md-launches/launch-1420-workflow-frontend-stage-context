@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-12T13:24:57.420Z",
+  "mode": "read-only; no wallet or transactions",
+  "expectedChainId": 1,
+  "actualChainId": 1,
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "address": "0x6abb57b52a2d12c1af47cd5819154034cf35bc3e",
+      "codeBytes": 1503,
+      "state": {
+        "name": "Pulse",
+        "symbol": "PULSE",
+        "decimals": 18,
+        "totalSupply": "1000000000000000000000000000"
+      }
+    },
+    {
+      "name": "PulseDrone",
+      "address": "0x7a3bc2d6578f1528ca963a78824e5ba19257d2fe",
+      "codeBytes": 15568,
+      "state": {
+        "pulseToken": "0x6Abb57b52a2D12c1Af47CD5819154034CF35bC3E",
+        "totalMinted": "0",
+        "totalStaked": "0"
+      }
+    }
+  ],
+  "protocol": [
+    {
+      "name": "poolManager",
+      "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+      "codeBytes": 24009
+    },
+    {
+      "name": "universalRouter",
+      "address": "0x66a9893cc07d91d95644aedd05d03f95e1dba8af",
+      "codeBytes": 19499
+    },
+    {
+      "name": "quoter",
+      "address": "0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203",
+      "codeBytes": 5820
+    },
+    {
+      "name": "stateView",
+      "address": "0x7ffe42c4a5deea5b0fec41c94c136cf115597227",
+      "codeBytes": 3531
+    },
+    {
+      "name": "positionManager",
+      "address": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+      "codeBytes": 23877
+    },
+    {
+      "name": "permit2",
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "codeBytes": 9152
+    }
+  ],
+  "poolId": "0x57b4dafe51aa9e80a749abbbc4bbfb4216c31f16feff6965c6a148aca30933ed",
+  "poolSlot0": [
+    "4295128740",
+    -887272,
+    0,
+    12500
+  ],
+  "pairToken": {
+    "symbol": "IMD",
+    "decimals": 18
+  },
+  "blockNumber": "26176675",
+  "blockTimestamp": "1791811487"
+}

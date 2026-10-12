@@ -1,0 +1,58 @@
+{
+  "chainId": 1,
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+    "currency0": "0x6abb57b52a2d12c1af47cd5819154034cf35bc3e",
+    "currency1": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "tickSpacing": 60
+  },
+  "repoUrl": "https://github.com/identity-md-launches/launch-1416-workflow-contract-stage-context",
+  "version": 1,
+  "launchId": "6fbf7ae1-34c4-42ec-8f56-fe2c78ea5c2f",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 12500,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7"
+    },
+    "notes": "LaunchToken is Pulse (PULSE), a plain fixed-supply ERC-20 with 18 decimals and no constructor arguments. PulseDrone permanently binds PULSE through its sole address constructor argument, $token. It provides free soulbound Drone minting, heartbeats, fully onchain art and instant staking withdrawals; staking determines rank and pays no rewards. PulseDrone has no owner or administrative powers and requires no initialization calls. DroneArt is an internal library inlined into PulseDrone, not a separate deployment. The factory supplies the pool, MerkleDistributor and initialization-only pool guard. The pool pairs with IMD at a 1.25% fee. The manifest initialPrice is the prescribed reference value; services derive the effective opening price from the launch policy and token ordering. Policy and signed artifact linkage are service responsibilities.",
+    "token": {
+      "name": "Pulse",
+      "symbol": "PULSE",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "PulseDrone",
+        "constructorArgs": [
+          "$token"
+        ]
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0xca70e1dfb1a5c6bab79b9bd0bf115ec54c760e5f93cde6dbf0f579f2541c76cc",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0x6abb57b52a2d12c1af47cd5819154034cf35bc3e",
+      "blockNumber": 26176575,
+      "creationCodeHash": "ec4cf62a56e18e27b6ae07ff9cc6a22da850d92b5b2b0c07b6278c08228fef41"
+    },
+    {
+      "name": "PulseDrone",
+      "txHash": "0xca70e1dfb1a5c6bab79b9bd0bf115ec54c760e5f93cde6dbf0f579f2541c76cc",
+      "abiHash": "19aef383352ab1b3f36d130f60a6142b7563a244b17a12b7b853399b95b2f983",
+      "address": "0x7a3bc2d6578f1528ca963a78824e5ba19257d2fe",
+      "blockNumber": 26176575,
+      "creationCodeHash": "9d5d6e82e308a02b33465ac3fa7f7e75263aa4ba614ea5a04ca6f5dbf409a833"
+    }
+  ],
+  "sourceCommit": "3807cba5031b0b3a7efeb9d821270cf5847d8c3e",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "d7fb79503b1a59cac7288fcaabb5b2902afaa108f457e42d43611d3da13d93aa"
+}

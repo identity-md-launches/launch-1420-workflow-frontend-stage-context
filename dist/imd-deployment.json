@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "launchId": "6fbf7ae1-34c4-42ec-8f56-fe2c78ea5c2f",
+  "chainId": 1,
+  "sourceCommit": "3807cba5031b0b3a7efeb9d821270cf5847d8c3e",
+  "attestationHash": "d7fb79503b1a59cac7288fcaabb5b2902afaa108f457e42d43611d3da13d93aa",
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "address": "0x6abb57b52a2d12c1af47cd5819154034cf35bc3e",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "abiPath": "abi/LaunchToken.json"
+    },
+    {
+      "name": "PulseDrone",
+      "address": "0x7a3bc2d6578f1528ca963a78824e5ba19257d2fe",
+      "abiHash": "19aef383352ab1b3f36d130f60a6142b7563a244b17a12b7b853399b95b2f983",
+      "abiPath": "abi/PulseDrone.json"
+    }
+  ],
+  "assets": [
+    {
+      "path": "THIRD-PARTY.txt",
+      "sha256": "d99d4f9ff5a82b8a9c2bd2e0beddd7002da5e08f5eb9ce2734a80da24479b230"
+    },
+    {
+      "path": "abi/LaunchToken.json",
+      "sha256": "9578fcb499b4ba5fac51462a67a2654d9f803e0ea3af9bdb19130ff695808542"
+    },
+    {
+      "path": "abi/PulseDrone.json",
+      "sha256": "18d4823170e8955fbdf9a39a2be87209532d98115bd7749551eb66063cd3b72c"
+    },
+    {
+      "path": "assets/ccip-DgYlq2x-.js",
+      "sha256": "28eb2b8653d447f87fbf52d1a2d4de283942ed98959edf77f8cedd03acb264ca"
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+    },
+    {
+      "path": "assets/index-CG2vanT_.css",
+      "sha256": "0db75a4262477c33afbc35e4a19f89d46c1b04298bc815a604fcb7f22f652b4e"
+    },
+    {
+      "path": "assets/index-CK3olP71.js",
+      "sha256": "225e2a78d84ca8e4c1b2cc8958026004b1056c5623548262f47cf039a99ce5b3"
+    },
+    {
+      "path": "assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "b06431e19673868be555cc21ccdce810e1d0772c9b8b949bfce3118d32e5a852"
+    },
+    {
+      "path": "index.html",
+      "sha256": "26b83f3b3ae67600526aa54a54cff8a8e6defe84d459be1e16b24e10b30cfb14"
+    }
+  ],
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+    "currency0": "0x6abb57b52a2d12c1af47cd5819154034cf35bc3e",
+    "currency1": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "tickSpacing": 60
+  },
+  "network": {
+    "chainId": 1,
+    "name": "Ethereum",
+    "testnet": false,
+    "rpcUrls": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "explorer": "https://etherscan.io",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "faucets": [],
+    "uniswapV4": {
+      "poolManager": "0x000000000004444c5dc75cb358380d2e3de08a90",
+      "universalRouter": "0x66a9893cc07d91d95644aedd05d03f95e1dba8af",
+      "quoter": "0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203",
+      "stateView": "0x7ffe42c4a5deea5b0fec41c94c136cf115597227",
+      "positionManager": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    "pairToken": {
+      "address": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+      "symbol": "IMD",
+      "name": "Identity.md",
+      "decimals": 18
+    },
+    "otherPairTokens": [
+      {
+        "id": "fwa",
+        "address": "0xa0df17b5ac76ababa36e1450e2cbcd18a620c845",
+        "symbol": "FWA",
+        "name": "Fake World Assets",
+        "decimals": 18
+      }
+    ]
+  },
+  "walletAddChain": {
+    "chainId": "0x1",
+    "chainName": "Ethereum",
+    "rpcUrls": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "blockExplorerUrls": [
+      "https://etherscan.io"
+    ]
+  }
+}

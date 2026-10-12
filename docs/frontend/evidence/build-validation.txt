@@ -1,0 +1,17 @@
+
+> pulse-swarm-frontend@1.0.0 build
+> tsc --noEmit && vite build && node scripts/export.mjs
+
+vite v7.3.1 building client environment for production...
+transforming...
+✓ 435 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/index.html                                              1.01 kB │ gzip:   0.51 kB
+../dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2   14.71 kB
+../dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2        24.84 kB
+../dist/assets/index-CG2vanT_.css                              24.29 kB │ gzip:   5.84 kB
+../dist/assets/ccip-DgYlq2x-.js                                 2.61 kB │ gzip:   1.23 kB
+../dist/assets/index-CK3olP71.js                              518.44 kB │ gzip: 160.66 kB
+✓ built in 2.59s
+Exported 2 pinned ABIs, 10 assets, 639,525 asset bytes; exact handoff/network/pool key and all hashes match.

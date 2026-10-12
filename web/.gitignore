@@ -1,0 +1,9 @@
+# Explicit path budget: web/.gitignore (frontend dependencies and transient output only).
+**/node_modules/
+**/.npm/
+**/.cache/
+**/.vite/
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/*.tsbuildinfo
